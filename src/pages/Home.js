@@ -14,7 +14,7 @@ export const Home = () => {
         <meta property="og:locale" content="es_EN" />
         <meta property="og:type" content="article" />
       </Helmet>
-      <h2>hola mundo</h2>
+      <h2>Hola Mundo</h2>
     </>
   );
 };
