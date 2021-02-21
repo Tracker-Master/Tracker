@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { devices } from 'Routes/GlobalStyles';
+import { devices, sizes } from 'Routes/GlobalStyles';
 
 import { Header } from './Header';
 import { Footer } from './Footer';
@@ -19,16 +19,16 @@ export const Layout = ({ children }) => {
 export const StyledLayout = styled.div`
   display: grid;
   grid-template-rows: 50px 1fr 50px;
-
   height: 100vh;
-
   @media ${devices.breakpointsMobile} {
-    /* background-color: red; */
   }
   @media ${devices.breakpointsTablet} {
-    /* background-color: blue; */
   }
   @media ${devices.breakpointsDesktop} {
-    /* background-color: yellow; */
+  }
+  & div:nth-of-type(2) {
+    background-image: url('https://i.imgur.com/M8kOD68.png');
+    max-width: ${sizes.desktop};
+    margin: 0 auto;
   }
 `;
