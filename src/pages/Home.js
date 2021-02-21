@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { palette, sizes, devices } from 'Routes/GlobalStyles';
+import { Carousell, CarouselContainer } from 'Components/Carousell';
 
 export const Home = () => {
   const [boardID, setBoardID] = useState('');
@@ -31,17 +32,32 @@ export const Home = () => {
         <meta property="og:type" content="article" />
       </Helmet>
       <StyledHome>
-        <Title>Lorem ipsum</Title>
-        <Image>Image</Image>
-        <About>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa quia
-            accusantium, provident sed dolore repellat maiores harum molestias,
-            ex eligendi, aliquid deserunt ducimus? Odio, excepturi perferendis
-            obcaecati assumenda consequuntur facere.
-          </p>
-        </About>
-        <form onSubmit={handleSubmit}>
+        <Title>
+          Leemos tu tablero de Trello <br /> y <br />{' '}
+          <p>analizamos tu progreso</p>
+        </Title>
+        <CarouselContainer>
+          <Carousell>
+            <img src="https://i.imgur.com/USKP8pl.png" alt="" />
+            <img src="https://i.imgur.com/UnbKc7E.png" alt="" />
+            <img src="https://i.imgur.com/8GjBkuM.png" alt="" />
+          </Carousell>
+          <Carousell>
+            <About>
+              Sólo necesitas introducir el ID de tu tablero y nosotros haremos
+              el resto
+            </About>
+            <About>
+              Sabrás el número de miembros con los que cuenta tu tablero, y el
+              nombre de cada uno de ellos
+            </About>
+            <About>
+              Sabrás de una manera rápida el número total de tarjetas que tienes
+              en cada lista
+            </About>
+          </Carousell>
+        </CarouselContainer>
+        <FormBoard onSubmit={handleSubmit}>
           <input
             onChange={handleChange}
             type="text"
@@ -49,7 +65,7 @@ export const Home = () => {
             placeholder="Board ID"
           />
           <button>Search Board</button>
-        </form>
+        </FormBoard>
       </StyledHome>
     </>
   );
@@ -63,19 +79,56 @@ export const StyledHome = styled.div`
   max-width: ${sizes.desktop};
   margin: 0 auto;
   overflow: auto;
+  background-image: url('https://i.imgur.com/M8kOD68.png');
 
   @media ${devices.breakpointsMobile} {
     width: 90%;
   }
 `;
-export const Title = styled.h1``;
-export const Image = styled.picture``;
-export const About = styled.div`
-  p {
-    text-align: justify;
+export const Title = styled.h1`
+  text-align: center;
+  color: ${palette.firstColor};
+  & p {
+    color: ${palette.secondColor};
+  }
+  @media ${devices.breakpointsMobile} {
+    font-size: 1.5rem;
   }
 `;
-export const Listas = styled.li`
-  list-style: none;
-  font-size: 11px;
+export const About = styled.div`
+  display: flex;
+  align-items: center;
+  min-height: 100px;
+  max-width: ${sizes.tablet};
+  text-align: center;
+  font-size: 0.875rem;
+`;
+export const FormBoard = styled.form`
+  display: grid;
+  width: 100%;
+  gap: 1rem 0;
+  justify-items: end;
+  max-width: ${sizes.mobile};
+
+  & input {
+    width: 100%;
+    height: 2rem;
+    padding: 0 0.5rem;
+    border: 2px solid ${palette.firstColor};
+    border-radius: 1rem;
+    outline: none;
+    text-align: center;
+    font-weight: 600;
+    color: ${palette.firstColor};
+  }
+  & button {
+    height: 2rem;
+    width: 120px;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 2px 2px ${palette.secondColor};
+    background-color: ${palette.secondColor};
+    color: ${palette.whiteColor};
+    font-weight: bold;
+  }
 `;

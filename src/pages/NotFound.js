@@ -1,9 +1,18 @@
 import React from 'react';
 
+import { palette } from 'Routes/GlobalStyles';
+
 export const NotFound = () => {
   return (
-    <div>
-      <h2>Error</h2>
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        color: `${palette.firstColor}`,
+      }}
+    >
+      <h1>Error</h1>
     </div>
   );
 };

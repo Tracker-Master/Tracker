@@ -9,10 +9,11 @@ export const Footer = () => {
     <StyledFooter>
       <Link to="">
         <small>
+          Your Trello board needs only three lists: <br />
           <em>
-            Your Trello board needs only three lists: <br />
+            <strong>To Do</strong>, <strong>Doing</strong>,{' '}
+            <strong>Done</strong>
           </em>
-          <strong>To Do</strong>, <strong>Doing</strong>, <strong>Done</strong>
         </small>
       </Link>
     </StyledFooter>
