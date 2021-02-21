@@ -10,6 +10,7 @@ export const NotFound = () => {
         alignItems: 'center',
         justifyContent: 'center',
         color: `${palette.firstColor}`,
+        width: '100%',
       }}
     >
       <h1>Error</h1>

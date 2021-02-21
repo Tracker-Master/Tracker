@@ -76,11 +76,7 @@ export const StyledHome = styled.div`
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  max-width: ${sizes.desktop};
-  margin: 0 auto;
   overflow: auto;
-  background-image: url('https://i.imgur.com/M8kOD68.png');
-
   @media ${devices.breakpointsMobile} {
     width: 90%;
   }

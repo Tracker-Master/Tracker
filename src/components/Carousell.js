@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import Carousel, { props } from 'react-elastic-carousel';
+import Carousel from 'react-elastic-carousel';
 
-import { palette, sizes, devices } from 'Routes/GlobalStyles';
+import { palette, sizes } from 'Routes/GlobalStyles';
 
 export const Carousell = ({ children }) => {
   return (
@@ -16,12 +16,12 @@ export const Carousell = ({ children }) => {
 
 export const CarouselContainer = styled.div`
   width: 100%;
-  max-width: ${sizes.desktop};
-
+  outline: none;
   & :first-child {
+    outline: none;
     & .rec-carousel button {
       color: ${palette.firstColor};
-      background: transparent;
+      background: none;
       border: none;
       font-size: 1.5rem;
       box-shadow: none;
@@ -29,7 +29,6 @@ export const CarouselContainer = styled.div`
       &:focus:enabled {
         color: ${palette.firstColor};
         box-shadow: none;
-        background-color: transparent;
         text-shadow: 10px 10px 10px 0 ${palette.secondColor};
       }
       &:disabled {
@@ -40,7 +39,6 @@ export const CarouselContainer = styled.div`
       height: 5px;
       width: 5px;
       box-shadow: 0px 0px 2px 2px ${palette.firstColorAlpha};
-      /* background: transparent; */
     }
     & img {
       width: 100%;
@@ -50,7 +48,7 @@ export const CarouselContainer = styled.div`
   & :last-child {
     & .rec-carousel button {
       color: ${palette.firstColor};
-      background: transparent;
+      background: none;
       border: none;
       font-size: 1.5rem;
       box-shadow: none;
@@ -58,7 +56,7 @@ export const CarouselContainer = styled.div`
       &:focus:enabled {
         color: ${palette.firstColor};
         box-shadow: none;
-        background-color: transparent;
+
         text-shadow: 10px 10px 10px 0 ${palette.secondColor};
       }
       &:disabled {
@@ -66,9 +64,7 @@ export const CarouselContainer = styled.div`
       }
     }
     & .rec-pagination button {
-      /* background-color: red; */
       display: none;
-      /* background: transparent; */
     }
   }
 `;
