@@ -88,11 +88,11 @@ export const StyledHome = styled.div`
 export const Title = styled.h1`
   text-align: center;
   color: ${palette.firstColor};
-  & p {
-    color: ${palette.secondColor};
-  }
   @media ${devices.breakpointsMobile} {
     font-size: 1.5rem;
+  }
+  & p {
+    color: ${palette.secondColor};
   }
 `;
 export const About = styled.div`
@@ -109,7 +109,6 @@ export const FormBoard = styled.form`
   gap: 1rem 0;
   justify-items: end;
   max-width: ${sizes.mobile};
-
   & input {
     width: 100%;
     height: 2rem;

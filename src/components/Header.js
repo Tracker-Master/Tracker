@@ -65,6 +65,7 @@ export const StyledNav = styled.nav`
     }
     & li {
       list-style: none;
+      cursor: pointer;
       img {
         width: 2rem;
         height: inherit;

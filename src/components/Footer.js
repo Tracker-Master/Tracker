@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { palette, sizes, devices } from 'Routes/GlobalStyles';
+import { palette, devices } from 'Routes/GlobalStyles';
 
 export const Footer = () => {
   return (
@@ -24,19 +24,15 @@ export const StyledFooter = styled.div`
   justify-content: center;
   align-items: center;
   line-height: 0.9rem;
-  & small {
-    color: ${palette.secondTextColor};
-  }
-  @media ${devices.breakpointsMobile} {
-    /* opacity: 0; */
-  }
-  @media ${devices.breakpointsTablet} {
-    /* background-color: blue; */
-  }
   @media ${devices.breakpointsDesktop} {
     background: ${palette.firstColor};
-    & small {
-      color: ${palette.whiteColor};
+    & a {
+      & small {
+        color: ${palette.whiteColor};
+      }
     }
+  }
+  & small {
+    color: ${palette.secondTextColor};
   }
 `;
