@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { palette, devices, sizes } from 'Routes/GlobalStyles';
 
 import Icon from 'Assets/ic_menu.svg';
+import Logo from 'Assets/tracker-logo.svg';
 
 export const Header = () => {
   return (
@@ -12,7 +13,7 @@ export const Header = () => {
       <StyledHeaderContainer>
         <StyledLogo>
           <Link to="/">
-            <img src="https://i.imgur.com/TA9nhUj.png" alt="Logo" />
+            <img src={Logo} alt="Logo" />
           </Link>
         </StyledLogo>
 
@@ -48,10 +49,17 @@ export const StyledHeaderContainer = styled.div`
 export const StyledLogo = styled.picture`
   display: flex;
   justify-content: flex-start;
+  & a {
+    height: inherit;
+    img {
+      height: 100%;
+    }
+  }
 `;
 export const StyledNav = styled.nav`
   display: flex;
   justify-content: flex-end;
+  height: inherit;
   & ul {
     display: inherit;
     width: 100%;

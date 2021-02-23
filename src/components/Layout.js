@@ -26,9 +26,18 @@ export const StyledLayout = styled.div`
   }
   @media ${devices.breakpointsDesktop} {
   }
-  & div:nth-of-type(2) {
+  & main {
     background-image: url('https://i.imgur.com/M8kOD68.png');
     max-width: ${sizes.desktop};
     margin: 0 auto;
+    overflow: auto;
+    @media ${devices.breakpointsMobile} {
+      width: 100%;
+      padding: 1rem;
+      /* width: 90%; */
+    }
+    @media ${devices.breakpointsMobile} {
+      padding: 2rem;
+    }
   }
 `;

@@ -7,22 +7,22 @@ import { palette, sizes, devices } from 'Routes/GlobalStyles';
 import { Carousell, CarouselContainer } from 'Components/Carousell';
 
 export const Home = () => {
-  const [boardID, setBoardID] = useState('');
   const history = useHistory();
+  const [board, setBoard] = useState([]);
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    history.push(`/board/${boardID}`);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    history.push(`/board/${board}`);
   };
 
-  const handleChange = (evt) => {
-    setBoardID(evt.target.value);
+  const handleChange = (event) => {
+    setBoard(event.target.value);
   };
 
   return (
     <>
       <Helmet>
-        <title>🧡 Proyect Tracker</title>
+        <title>Proyect Tracker</title>
         <meta property="og:title" content="Proyect Tracker" />
         <meta property="og:description" content="Proyect Tracker" />
         <meta property="og:image" content="" />
@@ -33,8 +33,8 @@ export const Home = () => {
       </Helmet>
       <StyledHome>
         <Title>
-          Leemos tu tablero de Trello <br /> y <br />{' '}
-          <p>analizamos tu progreso</p>
+          Leemos tu tablero de Trello <br />
+          <p>y analizamos tu progreso</p>
         </Title>
         <CarouselContainer>
           <Carousell>
@@ -61,8 +61,8 @@ export const Home = () => {
           <input
             onChange={handleChange}
             type="text"
-            value={boardID}
-            placeholder="Board ID"
+            value={board}
+            placeholder="Write your board ID"
           />
           <button>Search Board</button>
         </FormBoard>
@@ -71,15 +71,11 @@ export const Home = () => {
   );
 };
 
-export const StyledHome = styled.div`
+export const StyledHome = styled.main`
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  overflow: auto;
-  @media ${devices.breakpointsMobile} {
-    width: 90%;
-  }
 `;
 export const Title = styled.h1`
   text-align: center;
@@ -112,11 +108,16 @@ export const FormBoard = styled.form`
     border: 2px solid ${palette.firstColor};
     border-radius: 1rem;
     outline: none;
-    text-align: center;
-    font-weight: 600;
     color: ${palette.firstColor};
+    & ::placeholder {
+      opacity: 0.5;
+    }
+    & :focus {
+      font-weight: 600;
+    }
   }
   & button {
+    margin-right: 0.125rem;
     height: 2rem;
     width: 120px;
     border: none;

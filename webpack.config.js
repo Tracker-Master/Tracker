@@ -15,6 +15,7 @@ module.exports = {
       Test: path.resolve(__dirname, './src/__test__'),
       Assets: path.resolve(__dirname, './src/assets'),
       Components: path.resolve(__dirname, './src/components'),
+      Context: path.resolve(__dirname, './src/context'),
       Pages: path.resolve(__dirname, './src/pages'),
       Routes: path.resolve(__dirname, './src/routes'),
       Services: path.resolve(__dirname, './src/services'),

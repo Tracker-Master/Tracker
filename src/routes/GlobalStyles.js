@@ -10,7 +10,7 @@ export const palette = {
   fistTitleColor: `#673AB7`,
   secondTitleColor: `#8BC34A`,
   firstTextColor: `#212121`,
-  secondTextColor: `#757575`,
+  secondTextColor: `#707070`,
 };
 
 export const fonts = {
@@ -19,7 +19,8 @@ export const fonts = {
 export const sizes = {
   mobile: `375px`,
   tablet: `768px`,
-  desktop: `1440px`,
+  desktop: `1024px`,
+  desktop_4k: `1440px`,
 };
 export const devices = {
   breakpointsMobile: `(min-width: ${sizes.mobile})`,

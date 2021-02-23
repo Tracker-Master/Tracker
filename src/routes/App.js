@@ -2,21 +2,27 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
+import { Layout } from 'Components/Layout';
 import { Home } from 'Pages/Home';
 import { BoardInfo } from 'Pages/BoardInfo';
-
 import { NotFound } from 'Pages/NotFound';
-import { Layout } from 'Components/Layout';
+
+import { fonts } from './GlobalStyles';
+import { BoardContextProvider } from 'Context/BoardContext';
 
 export const App = () => {
   return (
     <BrowserRouter>
-      <GlobalStyles />
+      <GlobalStyle />
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/board/:boardID" component={BoardInfo} />
-          {/* <Route exact path="/recomendations" component={Recomendations} /> */}
+          <BoardContextProvider>
+            <Route exact path="/board/:ID" component={BoardInfo} />
+            <Route exact path="/board/:ID/card?/:id?" component={BoardInfo} />
+            <Route exact path="/board/:ID/list?/:id?" component={BoardInfo} />
+            <Route exact path="/board/:ID/member?/:id?" component={BoardInfo} />
+          </BoardContextProvider>
           <Route component={NotFound} />
         </Switch>
       </Layout>
@@ -24,7 +30,7 @@ export const App = () => {
   );
 };
 
-export const GlobalStyles = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 *,
 &::after,
 &::before {
@@ -34,7 +40,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 html {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: ${fonts.font};
   scroll-behavior: smooth;
   height: 100vh;
 }
@@ -50,18 +56,6 @@ a{
   &:hover{
     opacity: 0.75;
   }
-  ${'' /* &:link{
-    color: green;
-  } */}
-  ${'' /* &:visited{
-    color:red;
-  } */}
-  ${'' /* &:active{
-    color:yellow;
-  } */}
-  ${'' /* &:focus{
-    color: blue;
-  } */}
 }
 p {
   margin: 0;

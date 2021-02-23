@@ -20,7 +20,7 @@ export const CarouselContainer = styled.div`
   & :first-child {
     outline: none;
     & .rec-carousel button {
-      color: ${palette.firstColor};
+      /* color: transparent; */
       background: none;
       border: none;
       font-size: 1.5rem;
@@ -36,9 +36,9 @@ export const CarouselContainer = styled.div`
       }
     }
     & .rec-pagination button {
-      height: 5px;
-      width: 5px;
-      box-shadow: 0px 0px 2px 2px ${palette.firstColorAlpha};
+      height: 0.5rem;
+      width: 0.5rem;
+      box-shadow: 0px 0px 0.125rem 0.125rem ${palette.firstColorAlpha};
     }
     & img {
       width: 100%;
@@ -47,7 +47,7 @@ export const CarouselContainer = styled.div`
   }
   & :last-child {
     & .rec-carousel button {
-      color: ${palette.firstColor};
+      color: transparent;
       background: none;
       border: none;
       font-size: 1.5rem;
@@ -56,8 +56,7 @@ export const CarouselContainer = styled.div`
       &:focus:enabled {
         color: ${palette.firstColor};
         box-shadow: none;
-
-        text-shadow: 10px 10px 10px 0 ${palette.secondColor};
+        text-shadow: 0.625rem 0.625rem 0.625rem 0 ${palette.secondColor};
       }
       &:disabled {
         color: transparent;
