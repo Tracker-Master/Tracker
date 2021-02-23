@@ -6,7 +6,6 @@ import { Modal, Content, Image, Title, Paragraphs} from 'Styles/components/Modal
 export const ModalWarning = ({ modal, onClose }) => {
 
   const [change, setChange] = useState(modal);
-  console.log(change);
 
   useEffect(() => {
     const clear = setTimeout(() => {
@@ -22,26 +21,13 @@ export const ModalWarning = ({ modal, onClose }) => {
 
   return ReactDOM.createPortal (
     <>
-      {
-        change
-          ? (
-            <Modal modal={true}>
-              <Content>
-                <Image src='https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/modal_cry.svg' />
-                <Title>Uups...</Title>
-                <Paragraphs>El ID que nos proporcionaste no es valido</Paragraphs>
-              </Content>
-            </Modal>
-          ) : (
-            <Modal modal={false}>
-              <Content>
-                <Image src='https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/modal_cry.svg' />
-                <Title>Uups...</Title>
-                <Paragraphs>El ID que nos proporcionaste no es valido</Paragraphs>
-              </Content>
-            </Modal>
-          )
-      }
+      <Modal modal={change}>
+        <Content>
+          <Image src='https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/modal_cry.svg' />
+          <Title>Uups...</Title>
+          <Paragraphs>El ID que nos proporcionaste no es valido</Paragraphs>
+        </Content>
+      </Modal>
     </>,
     document.getElementById('modal')
   );

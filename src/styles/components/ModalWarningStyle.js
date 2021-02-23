@@ -2,8 +2,6 @@
 import styled, { keyframes, css } from 'styled-components';
 import { palette } from 'Routes/GlobalStyles';
 
-let change;
-
 const modalIn = keyframes`
   from {
     visibility: hidden;
@@ -45,8 +43,6 @@ export const Modal = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  ${props => console.log(props)}
 
   ${ props => props.modal && css`
       ${animationIn}
