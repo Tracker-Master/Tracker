@@ -19,6 +19,7 @@ module.exports = {
       Routes: path.resolve(__dirname, './src/routes'),
       Services: path.resolve(__dirname, './src/services'),
       Styles: path.resolve(__dirname, './src/styles'),
+      Hooks: path.resolve(__dirname, './src/hooks'),
     },
   },
   module: {
