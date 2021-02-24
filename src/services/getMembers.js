@@ -1,17 +1,19 @@
 import { API_URL, API_KEY, API_TOKEN } from './Settings';
-import { useParams } from 'react-router-dom';
 
-export const getMembers = async () => {
-  const { boardID } = useParams();
-  console.log(boardID);
+export const getMembers = async ({ boardID }) => {
   const apiURL = `${API_URL}/boards/${boardID}/members/?key=${API_KEY}&token=${API_TOKEN}`;
 
   try {
-    const response = await fetch(apiURL),
-      data = await response.json(),
-      memberId = data.map((member) => member);
-    // console.log(memberId);
-    return memberId;
+    const response = await fetch(apiURL);
+    if (typeof response === 'object') {
+      const data = await response.json(),
+        membersData = data.map((member) => {
+          const { fullName, id, username } = member;
+          return { fullName, id, username };
+        });
+      return membersData;
+    }
+    return {};
   } catch (err) {
     return console.error(err);
   }
