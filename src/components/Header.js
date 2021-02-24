@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
 
-import { palette, devices, sizes } from 'Routes/GlobalStyles';
-
-import Icon from 'Assets/ic_menu.svg';
-import Logo from 'Assets/tracker-logo.svg';
+import {
+  StyledHeader,
+  StyledHeaderContainer,
+  StyledLogo,
+  StyledNav,
+} from 'Styles/components/HeaderStyles';
 
 export const Header = () => {
   return (
@@ -13,71 +14,21 @@ export const Header = () => {
       <StyledHeaderContainer>
         <StyledLogo>
           <Link to="/">
-            <img src={Logo} alt="Logo" />
+            <img
+              src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/tracker-logo.svg"
+              alt="Logo"
+            />
           </Link>
         </StyledLogo>
-
         <StyledNav>
           <ul>
             <li>
-              <img src={Icon} alt="" />
+              <img src="" alt="burger-menu" />
             </li>
           </ul>
         </StyledNav>
+        <StyledLogo />
       </StyledHeaderContainer>
     </StyledHeader>
   );
 };
-
-export const StyledHeader = styled.div`
-  display: inherit;
-  background-color: ${palette.firstColor};
-  color: ${palette.whiteColor};
-`;
-export const StyledHeaderContainer = styled.div`
-  display: inherit;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-  padding: 0 5%;
-  max-width: ${sizes.desktop};
-  @media ${devices.breakpointsDesktop} {
-    padding: 0;
-  }
-`;
-export const StyledLogo = styled.picture`
-  display: flex;
-  justify-content: flex-start;
-  & a {
-    height: inherit;
-    img {
-      height: 100%;
-    }
-  }
-`;
-export const StyledNav = styled.nav`
-  display: flex;
-  justify-content: flex-end;
-  height: inherit;
-  & ul {
-    display: inherit;
-    width: 100%;
-    justify-content: flex-end;
-
-    @media ${devices.breakpointsTablet} {
-      width: 50%;
-    }
-    @media ${devices.breakpointsDesktop} {
-      width: 50%;
-    }
-    & li {
-      list-style: none;
-      cursor: pointer;
-      img {
-        width: 2rem;
-        height: inherit;
-      }
-    }
-  }
-`;

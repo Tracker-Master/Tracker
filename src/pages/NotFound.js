@@ -1,19 +1,10 @@
 import React from 'react';
-
-import { palette } from 'Routes/GlobalStyles';
+import { StyledNotFound } from 'Styles/pages/NotFoundStyles';
 
 export const NotFound = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: `${palette.firstColor}`,
-        width: '100%',
-      }}
-    >
+    <StyledNotFound style={{}}>
       <h1>Error</h1>
-    </div>
+    </StyledNotFound>
   );
 };
