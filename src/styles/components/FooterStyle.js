@@ -5,6 +5,7 @@ export const StyledFooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 13px;
   line-height: 0.9rem;
   
   & small {

@@ -1,9 +1,7 @@
-import styled, { css }from 'styled-components';
-import { palette, sizes, devices } from 'Routes/GlobalStyles';
+import styled from 'styled-components';
+import { palette, devices, sizes} from 'Routes/GlobalStyles';
 
 export const StyledHome = styled.section`
-  /* place-self: center; */
-  /* justify-self: center; */
   align-self: center;
   padding: 1.5rem;
   display: flex;
@@ -15,7 +13,18 @@ export const StyledHome = styled.section`
     width: 100%;
     max-height: 550px;
   }
+  @media ${devices.breakpointsTablet} {
+    padding: 3rem;
+    display: grid;
+    grid-template-areas: "title title"
+                         "sliders form";
+    grid-template-columns: 1fr 1fr;
+  }
 `;
+
+export const SliderContainer = styled.section`
+  grid-area: sliders;
+`
 
 export const Title = styled.h1`
   display: inline-block;
@@ -23,8 +32,13 @@ export const Title = styled.h1`
   font-size: 21px;
   text-align: center;
   color: ${palette.firstColor};
+  margin-bottom: 1rem;
   @media ${devices.breakpointsMobile} {
     font-size: 1.5rem;
+  }
+  @media ${devices.breakpointsTablet} {
+    font-size: 2rem;
+    grid-area: title;
   }
   & p {
     color: ${palette.secondColor};
@@ -34,6 +48,7 @@ export const Title = styled.h1`
 export const Img = styled.img`
   outline: none;
   width: 300px;
+  height: 200px;
 `
 
 export const About = styled.div`
@@ -42,9 +57,12 @@ export const About = styled.div`
   min-height: 100px;
   max-width: ${sizes.tablet};
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   & :focus {
     outline: none;
+  }
+  @media ${devices.breakpointsTablet} {
+    font-size: 18px;
   }
 `;
 
@@ -52,7 +70,9 @@ export const Form = styled.form`
   display: grid;
   width: 100%;
   gap: 1rem 0;
+  justify-self: flex-end;
   justify-items: end;
+  grid-area: form;
   max-width: ${sizes.mobile};
 `;
 
@@ -67,6 +87,7 @@ export const Input = styled.input`
   font-weight: 600;
   color: ${palette.firstColor};
   transition: 0.5s ease-in-out;
+  font-size: 14px;
 
   & :focus {
     transition: 0.5s ease-in-out;
@@ -83,6 +104,11 @@ export const Input = styled.input`
     transition: 0.5s ease-in-out;
     color: ${palette.firstTextColor};
     opacity: 0.4;
+  }
+
+  @media ${devices.breakpointsTablet} {
+    font-size: 18px;
+    padding: 0-5rem;
   }
 `;
 
@@ -103,6 +129,12 @@ export const Button = styled.button`
   & :active, :focus {
     transition: 0.5s ease-in-out;
     transform: scale(0.95);
+  }
+
+  @media ${devices.breakpointsTablet} {
+    font-size: 20px;
+    width: 130px;
+    /* padding: 1rem; */
   }
 
 `;
