@@ -74,7 +74,7 @@ export const Member = styled.div`
 export const CardsContainer = styled.div`
   display: flex;
   padding: 0.75rem 0 1.5rem 0;
-  gap: 0 1.25rem;
+  gap: 0 1.375rem;
   overflow-x: scroll;
   & ::-webkit-scrollbar {
     display: none;
