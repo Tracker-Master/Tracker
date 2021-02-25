@@ -41,7 +41,7 @@ export const Carousell = styled(Carousel)`
   @media ${devices.breakpointsTablet} {
     & .rec-swipable {
       & img {
-        max-width: calc(${sizes.tablet} - 10rem);
+        max-width: calc(${sizes.tablet} - 20rem);
       }
     }
   }

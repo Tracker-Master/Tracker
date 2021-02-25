@@ -74,24 +74,6 @@ export const BoardInfo = () => {
             </picture>
             <p>Jenkins Gene</p>
           </Member>
-          <Member>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <p>Jenkins Gene</p>
-          </Member>
-          <Member>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <p>Jenkins Gene</p>
-          </Member>
-          <Member>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <p>Jenkins Gene</p>
-          </Member>
         </MembersContainer>
         <hr />
         <SubTitle>
@@ -101,28 +83,28 @@ export const BoardInfo = () => {
         <SubTitle>Number of cards you have in each list: </SubTitle>
         <CardsContainer>
           <Card>
-            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
-            {/* {list.name === 'To Do'} */}
             <p>To Do</p>
             <p> 7</p>
+            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
+            {/* {list.name === 'To Do'} */}
           </Card>
           <Card>
-            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
-            {/* {list.name === 'To Do'} */}
             <p>To Do</p>
             <p> 7</p>
+            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
+            {/* {list.name === 'To Do'} */}
           </Card>
           <Card>
-            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
-            {/* {list.name === 'To Do'} */}
             <p>To Do</p>
             <p> 7</p>
+            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
+            {/* {list.name === 'To Do'} */}
           </Card>
           <Card>
-            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
-            {/* {list.name === 'To Do'} */}
             <p>To Do</p>
             <p> 7</p>
+            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
+            {/* {list.name === 'To Do'} */}
           </Card>
         </CardsContainer>
         <hr />

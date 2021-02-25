@@ -2,75 +2,104 @@ import styled from 'styled-components';
 import { palette, sizes, devices } from 'Styles/GlobalStyles';
 
 export const StyledInfo = styled.main`
-  /* display: flex;
-  align-items: center;
-  justify-content: space-around; */
-  /* flex-direction: column; */
   & hr {
     border-top: thin solid ${palette.dividerColor};
   }
+  @media ${devices.breakpointsTablet} {
+  }
+  @media ${devices.breakpointsDesktop} {
+  }
 `;
 export const Title = styled.h1`
+  max-height: 1.3125rem;
   font-size: 1rem;
   font-weight: normal;
   color: ${palette.firstColor};
   overflow-x: auto;
-  max-height: 1.3125rem;
+  @media ${devices.breakpointsTablet} {
+  }
+  @media ${devices.breakpointsDesktop} {
+  }
 `;
 export const SubTitle = styled.h2`
+  padding: 0.75rem 0;
   font-size: 1rem;
   font-weight: normal;
   color: ${palette.firstColor};
   overflow-x: auto;
-  padding: 0.75rem 0;
-  /* max-height: 1.3125rem; */
+  @media ${devices.breakpointsTablet} {
+  }
+  @media ${devices.breakpointsDesktop} {
+  }
 `;
 export const MembersContainer = styled.div`
   display: flex;
   padding: 1.5rem 0 1.5rem 1rem;
-  gap: 0 1rem;
+  gap: 0 1.5rem;
   overflow-x: auto;
+  & ::-webkit-scrollbar {
+    display: none; /* width of the entire scrollbar */
+  }
+  @media ${devices.breakpointsTablet} {
+  }
+  @media ${devices.breakpointsDesktop} {
+  }
 `;
 export const Member = styled.div`
+  max-height: 4.25rem;
+  max-width: 2.625rem;
   text-align: center;
-  /* padding: 1rem 0 1rem 1rem; */
   & picture {
     & img {
-      width: 2.5rem;
-      height: 2.5rem;
+      margin: 0.125rem;
+      height: 2.375rem;
+      width: 2.375rem;
       background-color: red;
       border-radius: 50%;
-      margin: 0.125rem;
     }
   }
   & p {
-    font-size: 0.625rem;
     max-height: 1.625rem;
+    font-size: 0.625rem;
     overflow-y: auto;
+    & ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  @media ${devices.breakpointsTablet} {
+  }
+  @media ${devices.breakpointsDesktop} {
   }
 `;
 export const CardsContainer = styled.div`
   display: flex;
   padding: 0.75rem 0 1.5rem 0;
   gap: 0 1.25rem;
-  overflow-x: auto;
+  overflow-x: scroll;
+  & ::-webkit-scrollbar {
+    display: none;
+  }
+  @media ${devices.breakpointsTablet} {
+  }
+  @media ${devices.breakpointsDesktop} {
+  }
 `;
 export const Card = styled.div`
   display: block;
   width: 5.75rem;
-  height: 4.5rem;
+  height: 4.625rem;
   padding: 0.75rem 0 0 0.75rem;
   background-image: url('https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/card-container.svg');
-  & :first-child {
-    min-width: 100%;
+
+  & p:first-child {
     height: 1rem;
-    /* border: 1px solid red; */
+    min-width: 100%;
     padding: 0 0 0 0.25rem;
     font-size: 0.625rem;
     overflow-x: auto;
-    /* width: 5.75rem; */
+    width: 5rem;
   }
-  & :last-child {
+  & p:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,5 +108,11 @@ export const Card = styled.div`
     font-size: 2rem;
     overflow-x: auto;
     color: ${palette.secondColor};
+  }
+
+  /* } */
+  @media ${devices.breakpointsTablet} {
+  }
+  @media ${devices.breakpointsDesktop} {
   }
 `;
