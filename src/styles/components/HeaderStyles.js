@@ -12,11 +12,12 @@ export const StyledHeader = styled.div`
 `;
 export const StyledHeaderContainer = styled.div`
   display: inherit;
-  grid-template-columns: 1fr 1fr;
+  grid-template: 1fr/1fr 1fr;
   align-items: center;
   margin: 0 auto;
-  width: 100%;
   padding: 0 5%;
+  width: 100%;
+  height: inherit;
   @media ${devices.breakpointsTablet} {
   }
   @media ${devices.breakpointsDesktop} {
@@ -26,13 +27,8 @@ export const StyledHeaderContainer = styled.div`
 `;
 export const StyledLogo = styled.picture`
   display: flex;
-  justify-content: flex-start;
-  & a {
-    height: inherit;
-    & img {
-      height: 100%;
-    }
-  }
+  justify-content: flex-end;
+  height: 50px;
   @media ${devices.breakpointsTablet} {
   }
   @media ${devices.breakpointsDesktop} {
@@ -40,7 +36,7 @@ export const StyledLogo = styled.picture`
 `;
 export const StyledNav = styled.nav`
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   height: inherit;
   & ul {
     display: inherit;

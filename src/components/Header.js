@@ -12,14 +12,6 @@ export const Header = () => {
   return (
     <StyledHeader>
       <StyledHeaderContainer>
-        <StyledLogo>
-          <Link to="/">
-            <img
-              src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/tracker-logo.svg"
-              alt="Logo"
-            />
-          </Link>
-        </StyledLogo>
         <StyledNav>
           <ul>
             <li>
@@ -27,7 +19,14 @@ export const Header = () => {
             </li>
           </ul>
         </StyledNav>
-        <StyledLogo />
+        <Link to="/">
+          <StyledLogo>
+            <img
+              src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/tracker-logo.svg"
+              alt="Logo"
+            />
+          </StyledLogo>
+        </Link>
       </StyledHeaderContainer>
     </StyledHeader>
   );

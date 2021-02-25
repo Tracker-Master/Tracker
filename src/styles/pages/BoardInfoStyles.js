@@ -7,7 +7,7 @@ export const StyledInfo = styled.main`
   justify-content: space-around; */
   /* flex-direction: column; */
   & hr {
-    border-top: thin solid ${palette.secondTextColor};
+    border-top: thin solid ${palette.dividerColor};
   }
 `;
 export const Title = styled.h1`

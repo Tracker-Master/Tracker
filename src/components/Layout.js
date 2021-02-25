@@ -9,7 +9,7 @@ export const Layout = ({ children }) => {
     <StyledLayout>
       <Header />
       {children}
-      <Footer />
+      {location.pathname === `/` ? <Footer /> : ''}
     </StyledLayout>
   );
 };

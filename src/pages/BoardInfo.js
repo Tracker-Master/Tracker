@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { Helmet } from 'react-helmet';
 
+import { SEOHeader } from 'Components/SEOHeader';
 import { Context } from 'Context/BoardContext';
 
 import {
@@ -25,24 +25,16 @@ export const BoardInfo = () => {
     setMember,
   } = useContext(Context);
 
-  console.log(
+  console
+    .log
     // board,
     // card
-    list
+    // list
     // member
-  );
+    ();
   return (
     <>
-      <Helmet>
-        <title>{`🔱${board.name}`}</title>
-        <meta property="og:title" content="Proyect Tracker" />
-        <meta property="og:description" content="Proyect Tracker" />
-        <meta property="og:image" content="" />
-        <meta property="og:url" content=".github" />
-        <meta property="og:site_name" content="Proyect Tracker" />
-        <meta property="og:locale" content="es_EN" />
-        <meta property="og:type" content="article" />
-      </Helmet>
+      <SEOHeader title={`🔱${board.name}`} />
       <StyledInfo>
         <Title>Members of {board.name}: </Title>
         <MembersContainer>
@@ -140,7 +132,7 @@ export const BoardInfo = () => {
         <hr />
         <SubTitle>
           You only need to complete <strong>{}</strong> to finish the project
-          {console.log('necesitas hacer un if para cuando llegue al 100%')}
+          {/* {console.log('necesitas hacer un if para cuando llegue al 100%')} */}
         </SubTitle>
       </StyledInfo>
     </>

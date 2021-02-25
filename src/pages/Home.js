@@ -14,7 +14,11 @@ export const Home = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    history.push(`/board/${board}`);
+    if (board === '') {
+      handleStateModal();
+    } else {
+      history.push(`/board/${board}`);
+    }
   };
 
   const handleChange = (event) => {
