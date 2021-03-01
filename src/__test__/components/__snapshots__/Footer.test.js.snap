@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 0.9rem;
+}
+
+.c0 small {
+  color: #757575;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+  .c0 {
+    background: #673AB7;
+  }
+
+  .c0 a small {
+    color: #fff;
+  }
+}
+
+<div
+  className="c0"
+>
+  <small>
+    Your Trello board needs only three lists: 
+    <br />
+    <em>
+      <strong>
+        To Do
+      </strong>
+      , 
+      <strong>
+        Doing
+      </strong>
+      ,
+       
+      <strong>
+        Done
+      </strong>
+    </em>
+  </small>
+</div>
+`;

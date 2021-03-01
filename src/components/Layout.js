@@ -1,10 +1,12 @@
 import React from 'react';
-import { StyledLayout } from 'Styles/components/LayoutStyles';
+// import { StyledLayout } from '../..//components/LayoutStyles';
 
-import { Header } from './Header';
-import { Footer } from './Footer';
+import { StyledLayout } from '../styles/components/LayoutStyles';
 
-export const Layout = ({ children }) => {
+import Header from './Header';
+import Footer from './Footer';
+
+const Layout = ({ children }) => {
   return (
     <StyledLayout>
       <Header />
@@ -13,3 +15,5 @@ export const Layout = ({ children }) => {
     </StyledLayout>
   );
 };
+
+export default Layout;

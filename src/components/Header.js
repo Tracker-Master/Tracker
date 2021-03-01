@@ -6,9 +6,9 @@ import {
   StyledHeaderContainer,
   StyledLogo,
   StyledNav,
-} from 'Styles/components/HeaderStyles';
+} from '../styles/components/HeaderStyles';
 
-export const Header = () => {
+const Header = () => {
   return (
     <StyledHeader>
       <StyledHeaderContainer>
@@ -31,3 +31,5 @@ export const Header = () => {
     </StyledHeader>
   );
 };
+
+export default Header;

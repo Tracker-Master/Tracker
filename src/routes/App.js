@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Layout } from 'Components/Layout';
+import Layout from 'Components/Layout';
 import { Home } from 'Pages/Home';
 import { BoardInfo } from 'Pages/BoardInfo';
 import { NotFound } from 'Pages/NotFound';
@@ -10,9 +10,11 @@ import { BoardContextProvider } from 'Context/BoardContext';
 
 import { GlobalStyle } from 'Styles/GlobalStyles';
 
+// import { Layout } from ''
+
 export const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <GlobalStyle />
       <Layout>
         <Switch>
@@ -26,6 +28,6 @@ export const App = () => {
           <Route component={NotFound} />
         </Switch>
       </Layout>
-    </BrowserRouter>
+    </Router>
   );
 };
