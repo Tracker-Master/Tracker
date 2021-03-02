@@ -34,9 +34,9 @@ export const BoardInfo = () => {
     ();
   return (
     <>
-      <SEOHeader title={`🔱 ${board.name}`} />
+      <SEOHeader title={`🔱 ${board?.name}`} />
       <StyledInfo>
-        <Title>Members of {board.name}: </Title>
+        <Title>Members of {board?.name}: </Title>
         <MembersContainer>
           <Member>
             <picture>
