@@ -7,8 +7,8 @@ export const getBoards = async ({ boardID }) => {
     const response = await fetch(apiURL);
     if (typeof response === 'object') {
       const boardData = await response.json(),
-        { id, name, shortUrl } = boardData;
-      return { id, name, shortUrl };
+        { id, name } = boardData;
+      return { id, name };
     }
     return {};
   } catch (err) {

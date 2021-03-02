@@ -40,7 +40,7 @@ export const StyledNav = styled.nav`
   height: inherit;
   & ul {
     display: inherit;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     width: 100%;
     & li {
       list-style: none;
@@ -48,6 +48,7 @@ export const StyledNav = styled.nav`
       & img {
         width: 2rem;
         height: inherit;
+        filter: invert(1);
       }
     }
   }

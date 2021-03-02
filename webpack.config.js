@@ -70,5 +70,5 @@ module.exports = {
     port: 3000,
     open: true,
   },
-  devtool: false,
+  devtool: 'eval',
 };

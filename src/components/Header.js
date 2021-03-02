@@ -15,7 +15,10 @@ export const Header = () => {
         <StyledNav>
           <ul>
             <li>
-              <img src="" alt="burger-menu" />
+              <img
+                src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/menu-24px.svg"
+                alt="burger-menu"
+              />
             </li>
           </ul>
         </StyledNav>
