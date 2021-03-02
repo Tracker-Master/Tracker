@@ -27,6 +27,9 @@ export const SubTitle = styled.h2`
   font-weight: normal;
   color: ${palette.firstColor};
   overflow-x: auto;
+  & .stronger {
+    color: ${palette.secondColor};
+  }
   @media ${devices.breakpointsTablet} {
   }
   @media ${devices.breakpointsDesktop} {

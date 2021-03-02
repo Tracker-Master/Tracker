@@ -1,83 +1,53 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useContext } from 'react';
 
 import { SEOHeader } from 'Components/SEOHeader';
+import { Members } from 'Components/Members';
+import { ProgressBar } from 'Components/ProgressBar';
 import { Context } from 'Context/BoardContext';
+import { PastelBar } from 'Components/PastelBar';
 
 import {
   StyledInfo,
   Title,
   SubTitle,
-  MembersContainer,
-  Member,
   CardsContainer,
   Card,
 } from 'Styles/pages/BoardInfoStyles';
 
-export const BoardInfo = () => {
-  const {
-    board,
-    setBoard,
-    card,
-    setCard,
-    list,
-    setList,
-    member,
-    setMember,
-  } = useContext(Context);
+const TODO_DOING_DONE = [
+  'To Do',
+  'Things To Do',
+  'Pendientes',
+  'Doing',
+  'En Curso',
+  'Done',
+  'Finalizados',
+];
 
-  console
-    .log
-    // board,
-    // card
-    // list
-    // member
-    ();
+export const BoardInfo = () => {
+  const { board, card, list } = useContext(Context);
+
+  useEffect(() => {
+    const filter = list.filter((singleList) => {
+      const capitalizeListTitle = singleList.name
+        .trim()
+        .toLowerCase()
+        .replace(/\w\S*/g, (w) => w.replace(/^\w/, (c) => c.toUpperCase()));
+      return TODO_DOING_DONE.includes(capitalizeListTitle);
+    });
+    console.log(filter);
+  }, []);
+
   return (
     <>
       <SEOHeader title={`🔱 ${board?.name}`} />
       <StyledInfo>
         <Title>Members of {board?.name}: </Title>
-        <MembersContainer>
-          <Member>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <p>Jenkins Gene Gene Gene Gene</p>
-          </Member>
-          <Member>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <p>Jenkins Gene</p>
-          </Member>
-          <Member>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <p>Jenkins Gene</p>
-          </Member>
-          <Member>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <p>Jenkins Gene</p>
-          </Member>
-          <Member>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <p>Jenkins Gene</p>
-          </Member>
-          <Member>
-            <picture>
-              <img src="" alt="" />
-            </picture>
-            <p>Jenkins Gene</p>
-          </Member>
-        </MembersContainer>
+        <Members />
         <hr />
         <SubTitle>
-          In total, your project has <strong>{card.length}</strong> cards
+          In total, your project has{' '}
+          <strong className="stronger">{card.length}</strong> cards
         </SubTitle>
         <hr />
         <SubTitle>Number of cards you have in each list: </SubTitle>
@@ -85,20 +55,14 @@ export const BoardInfo = () => {
           <Card>
             <p>To Do</p>
             <p> 7</p>
-            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
-            {/* {list.name === 'To Do'} */}
           </Card>
           <Card>
             <p>To Do</p>
             <p> 7</p>
-            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
-            {/* {list.name === 'To Do'} */}
           </Card>
           <Card>
             <p>To Do</p>
             <p> 7</p>
-            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
-            {/* {list.name === 'To Do'} */}
           </Card>
           <Card>
             <p>To Do</p>
@@ -111,10 +75,15 @@ export const BoardInfo = () => {
         <SubTitle>
           <strong>Your progress: </strong>
         </SubTitle>
+        <ProgressBar />
         <hr />
+        <PastelBar />
         <SubTitle>
           You only need to complete <strong>{}</strong> to finish the project
           {/* {console.log('necesitas hacer un if para cuando llegue al 100%')} */}
+          {/* {filter.map((item) => (
+            <p>{item.id}</p>
+          ))} */}
         </SubTitle>
       </StyledInfo>
     </>

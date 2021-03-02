@@ -9,6 +9,7 @@ export const getLists = async ({ boardID }) => {
       const data = await response.json(),
         listData = data.map((list) => {
           const { id, name } = list;
+
           return { id, name };
         });
       return listData;
