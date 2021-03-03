@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 
 import { Context } from 'Context/BoardContext';
-import { MembersContainer, Member } from 'Styles/pages/BoardInfoStyles';
+import { palette, sizes, devices } from 'Styles/GlobalStyles';
+import { MembersContainer, Member } from 'Styles/components/MembersStyles';
 
 export const Members = () => {
   const { member } = useContext(Context);
@@ -11,7 +12,7 @@ export const Members = () => {
         <Member key={member.id}>
           <picture>
             <img
-              src="https://www.gravatar.com/avatar/?d=mp"
+              src={`https://ui-avatars.com/api/?background=random&name=${member.fullName}&bold=true`}
               alt={`Image of ${member.fullName}`}
             />
           </picture>

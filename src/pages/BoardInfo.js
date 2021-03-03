@@ -79,7 +79,8 @@ export const BoardInfo = () => {
         <hr />
         <PastelBar />
         <SubTitle>
-          You only need to complete <strong>{}</strong> to finish the project
+          You only need to complete <strong className="stronger">{}%</strong> to
+          finish the project
           {/* {console.log('necesitas hacer un if para cuando llegue al 100%')} */}
           {/* {filter.map((item) => (
             <p>{item.id}</p>

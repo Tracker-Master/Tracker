@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import { palette, devices, sizes } from 'Styles/GlobalStyles';
 
 export const ContainerProgress = styled.div`
@@ -10,7 +9,7 @@ export const ContainerProgress = styled.div`
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border: 1px solid ${palette.firstColor};
+    border: 1px solid ${palette.firstColorAlpha};
     border-radius: 30px;
     overflow: hidden;
     ::-webkit-progress-bar {
@@ -24,11 +23,8 @@ export const ContainerProgress = styled.div`
       );
     }
   }
-  & p {
-    color: ${palette.secondColor};
-    font-size: 1.125rem;
-    font-weight: bold;
-    margin-right: 60px;
-    text-align: right;
+  @media ${devices.breakpointsTablet} {
+  }
+  @media ${devices.breakpointsDesktop} {
   }
 `;

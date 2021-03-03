@@ -22,8 +22,9 @@
     "url": "https://github.com/Tracker-Master/Tracker/issues"
   },
   "dependencies": {
-    "@babel/runtime": "^7.13.7",
+    "@babel/runtime": "^7.13.9",
     "chart.js": "^2.9.4",
+    "firebase-tools": "^9.5.0",
     "react": "^17.0.1",
     "react-chartjs-2": "^2.11.1",
     "react-dom": "^17.0.1",
@@ -32,9 +33,9 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.1",
-    "@babel/plugin-transform-runtime": "^7.13.7",
-    "@babel/preset-env": "^7.13.5",
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-transform-runtime": "^7.13.9",
+    "@babel/preset-env": "^7.13.9",
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
     "babel-plugin-styled-components": "^1.12.0",
