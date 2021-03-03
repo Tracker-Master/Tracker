@@ -10,6 +10,6 @@ export const getBoards = async ({ boardID }) => {
     { id, name } = boardData;
     return { id, name };
   } catch (err) {
-    throw new Error('Invalid ID')
+    return new Error('Invalid ID')
   }
 };
