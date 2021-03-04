@@ -15,6 +15,7 @@ export const BoardContextProvider = ({ children }) => {
 
   useEffect(() => {
     const ID = location.pathname.split('/board/', 2)[1];
+
     getBoards({ boardID: `${ID}` }).then((board) => {
       // console.log(board);
       setBoard(board);

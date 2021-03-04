@@ -6,10 +6,19 @@ import { Footer } from './Footer';
 
 export const Layout = ({ children }) => {
   return (
-    <StyledLayout>
-      <Header />
-      {children}
-      {location.pathname === `/` ? <Footer /> : ''}
-    </StyledLayout>
+    <>
+      {location.pathname === `/` ? (
+        <StyledLayout>
+          <Header />
+          {children}
+          <Footer />
+        </StyledLayout>
+      ) : (
+        <StyledLayout withOutFooter>
+          <Header />
+          {children}
+        </StyledLayout>
+      )}
+    </>
   );
 };

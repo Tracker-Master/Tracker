@@ -10,7 +10,7 @@ export const StyledHeader = styled.div`
   @media ${devices.breakpointsDesktop} {
   }
 `;
-export const StyledHeaderContainer = styled.div`
+export const HeaderContainer = styled.div`
   display: inherit;
   grid-template: 1fr/1fr 1fr;
   align-items: center;
@@ -25,7 +25,7 @@ export const StyledHeaderContainer = styled.div`
     padding: 0;
   }
 `;
-export const StyledLogo = styled.picture`
+export const Logo = styled.picture`
   display: flex;
   justify-content: flex-end;
   height: 50px;
@@ -34,7 +34,7 @@ export const StyledLogo = styled.picture`
   @media ${devices.breakpointsDesktop} {
   }
 `;
-export const StyledNav = styled.nav`
+export const Nav = styled.nav`
   display: flex;
   justify-content: flex-start;
   height: inherit;

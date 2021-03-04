@@ -5,12 +5,10 @@ export const getBoards = async ({ boardID }) => {
 
   try {
     const response = await fetch(apiURL);
-    if (typeof response === 'object') {
-      const boardData = await response.json(),
-        { id, name } = boardData;
-      return { id, name };
-    }
-    return {};
+
+    const boardData = await response.json(),
+      { id, name } = boardData;
+    return { id, name };
   } catch (err) {
     return console.error(err);
   }

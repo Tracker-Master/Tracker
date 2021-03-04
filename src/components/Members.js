@@ -2,12 +2,12 @@ import React, { useContext } from 'react';
 
 import { Context } from 'Context/BoardContext';
 import { palette, sizes, devices } from 'Styles/GlobalStyles';
-import { MembersContainer, Member } from 'Styles/components/MembersStyles';
+import { StyledMembers, Member } from 'Styles/components/MembersStyles';
 
 export const Members = () => {
   const { member } = useContext(Context);
   return (
-    <MembersContainer>
+    <StyledMembers>
       {member.map((member) => (
         <Member key={member.id}>
           <picture>
@@ -15,10 +15,10 @@ export const Members = () => {
               src={`https://ui-avatars.com/api/?background=random&name=${member.fullName}&bold=true`}
               alt={`Image of ${member.fullName}`}
             />
+            <figcaption>{member.fullName}</figcaption>
           </picture>
-          <p>{member.fullName}</p>
         </Member>
       ))}
-    </MembersContainer>
+    </StyledMembers>
   );
 };

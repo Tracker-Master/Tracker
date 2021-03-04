@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 
 import {
   StyledHeader,
-  StyledHeaderContainer,
-  StyledLogo,
-  StyledNav,
+  HeaderContainer,
+  Logo,
+  Nav,
 } from 'Styles/components/HeaderStyles';
 
 export const Header = () => {
   return (
     <StyledHeader>
-      <StyledHeaderContainer>
-        <StyledNav>
+      <HeaderContainer>
+        <Nav>
           <ul>
             <li>
               <img
@@ -21,16 +21,16 @@ export const Header = () => {
               />
             </li>
           </ul>
-        </StyledNav>
+        </Nav>
         <Link to="/">
-          <StyledLogo>
+          <Logo>
             <img
               src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/tracker-logo.svg"
               alt="Logo"
             />
-          </StyledLogo>
+          </Logo>
         </Link>
-      </StyledHeaderContainer>
+      </HeaderContainer>
     </StyledHeader>
   );
 };

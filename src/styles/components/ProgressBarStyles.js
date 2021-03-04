@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { palette, devices, sizes } from 'Styles/GlobalStyles';
 
-export const ContainerProgress = styled.div`
+export const StyledProgress = styled.div`
   margin: 8px auto 50px;
   & progress {
     width: 100%;
