@@ -91,14 +91,45 @@ export const CardsContainer = styled.section`
 export const ListCard = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
+  margin-top: 10px;
+`;
+export const CardContainers = styled.div`
+  position: relative;
+  width: 100px;
+  height: 70px;
+`;
+
+export const CardLeft = styled.div`
+  background-color: ${palette.whiteColor};
+  border: 1px solid ${palette.cardsBorderOpacity};
+  border-radius: 5px;
+  height: 60px;
+  position: absolute;
+  z-index: 1;
+  width: 80px;
+`;
+export const CardInner = styled.div`
+  background-color: ${palette.whiteColor};
+  border: 1px solid ${palette.cardsBorderOpacity1};
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  height: 60px;
+  left: 10px;
+  z-index: 2;
+  width: 80px;
 `;
 
 export const Card = styled.div`
+  background-color: ${palette.whiteColor};
   border: 1px solid ${palette.cardsBorder};
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  top: 20px;
+  left: 20px;
+  position: absolute;
+  z-index: 3;
   height: auto;
   width: 80px;
   & div {

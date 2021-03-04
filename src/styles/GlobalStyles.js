@@ -16,6 +16,8 @@ export const palette = {
   dividerColor: `#bdbdbd`,
   dividerColorOpacity: `rgba(189, 189, 189, 0.3)`,
   cardsBorder: `#707070`,
+  cardsBorderOpacity: `rgba(112,112,112, 0.3)`,
+  cardsBorderOpacity1: `rgba(112,112,112, 0.5)`,
   degradedPurple: `#764BA2`,
   degradedBlue: `#667EEA`,
 };
