@@ -12,6 +12,6 @@ export const getLists = async ({ boardID }) => {
       });
     return listData;
   } catch (err) {
-    return console.error(err);
+    return new Error()
   }
 };

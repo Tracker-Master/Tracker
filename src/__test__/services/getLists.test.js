@@ -32,6 +32,18 @@ describe('Tests on the getLists service', () => {
     const receivedLists = await getLists('correct-id')
 
     expect(receivedLists.length).toBe(3)
+    expect(receivedLists[0].id).toBe(1)
+    expect(receivedLists[0].name).toBe('To do')
+    expect(fetch).toHaveBeenCalledTimes(1)
+    expect(receivedLists[0]).toMatchObject(list)
+  })
+
+  test('should receive an error with an incorrect ID given', async () => {
+    fetch.mockReject(() => new Error())
+
+    const response = await getLists('incorrect-id')
+
+    expect(response).toEqual(Error())
   })
 
 })
