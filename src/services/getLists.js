@@ -5,15 +5,12 @@ export const getLists = async ({ boardID }) => {
 
   try {
     const response = await fetch(apiURL);
-    if (typeof response === 'object') {
-      const data = await response.json(),
-        listData = data.map((list) => {
-          const { id, name } = list;
-          return { id, name };
-        });
-      return listData;
-    }
-    return {};
+    const data = await response.json(),
+      listData = data.map((list) => {
+        const { id, name } = list;
+        return { id, name };
+      });
+    return listData;
   } catch (err) {
     return console.error(err);
   }
