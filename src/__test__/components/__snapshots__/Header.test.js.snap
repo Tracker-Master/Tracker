@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> Header snapshot 1`] = `
+.c0 {
+  display: inherit;
+  background-color: #673AB7;
+  color: #fff;
+}
+
+.c1 {
+  display: inherit;
+  grid-template: 1fr/1fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 5%;
+  width: 100%;
+  height: inherit;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 50px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: inherit;
+}
+
+.c2 ul {
+  display: inherit;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.c2 ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.c2 ul li img {
+  width: 2rem;
+  height: inherit;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+  .c1 {
+    max-width: 1024px;
+    padding: 0;
+  }
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:768px) {
+  .c2 ul {
+    width: 50%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c2 ul {
+    width: 50%;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <nav
+      className="c2"
+    >
+      <ul>
+        <li>
+          <img
+            alt="burger-menu"
+            src=""
+          />
+        </li>
+      </ul>
+    </nav>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <picture
+        className="c3"
+      >
+        <img
+          alt="Logo"
+          src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/tracker-logo.svg"
+        />
+      </picture>
+    </a>
+  </div>
+</div>
+`;

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { CarouselContainer, Carousell } from 'Styles/components/CarouselStyles';
+import { StyledCarousel, Carousell } from 'Styles/components/CarouselStyles';
 
 export const Carousel = ({ children }) => {
   return (
-    <CarouselContainer>
+    <StyledCarousel>
       <Carousell
         autoPlaySpeed={3000}
         enableAutoPlay={true}
@@ -43,6 +43,6 @@ export const Carousel = ({ children }) => {
           cada lista
         </p>
       </Carousell>
-    </CarouselContainer>
+    </StyledCarousel>
   );
 };

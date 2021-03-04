@@ -3,31 +3,34 @@ import { Link } from 'react-router-dom';
 
 import {
   StyledHeader,
-  StyledHeaderContainer,
-  StyledLogo,
-  StyledNav,
-} from '../styles/components/HeaderStyles';
+  HeaderContainer,
+  Logo,
+  Nav,
+} from 'Styles/components/HeaderStyles';
 
 const Header = () => {
   return (
     <StyledHeader>
-      <StyledHeaderContainer>
-        <StyledNav>
+      <HeaderContainer>
+        <Nav>
           <ul>
             <li>
-              <img src="" alt="burger-menu" />
+              <img
+                src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/menu-24px.svg"
+                alt="burger-menu"
+              />
             </li>
           </ul>
-        </StyledNav>
+        </Nav>
         <Link to="/">
-          <StyledLogo>
+          <Logo>
             <img
               src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/tracker-logo.svg"
               alt="Logo"
             />
-          </StyledLogo>
+          </Logo>
         </Link>
-      </StyledHeaderContainer>
+      </HeaderContainer>
     </StyledHeader>
   );
 };

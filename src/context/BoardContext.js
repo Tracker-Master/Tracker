@@ -5,8 +5,6 @@ import { getCards } from 'Services/getCards';
 import { getLists } from 'Services/getLists';
 import { getMembers } from 'Services/getMembers';
 
-const ID = location.pathname.split('/board/', 2)[1];
-
 export const Context = React.createContext();
 
 export const BoardContextProvider = ({ children }) => {
@@ -16,6 +14,8 @@ export const BoardContextProvider = ({ children }) => {
   const [member, setMember] = useState([]);
 
   useEffect(() => {
+    const ID = location.pathname.split('/board/', 2)[1];
+
     getBoards({ boardID: `${ID}` }).then((board) => {
       // console.log(board);
       setBoard(board);

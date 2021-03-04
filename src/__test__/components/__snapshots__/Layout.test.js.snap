@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> Layout snapshot 1`] = `
+.c1 {
+  display: inherit;
+  background-color: #673AB7;
+  color: #fff;
+}
+
+.c2 {
+  display: inherit;
+  grid-template: 1fr/1fr 1fr;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 5%;
+  width: 100%;
+  height: inherit;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 50px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: inherit;
+}
+
+.c3 ul {
+  display: inherit;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.c3 ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.c3 ul li img {
+  width: 2rem;
+  height: inherit;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 0.9rem;
+}
+
+.c5 small {
+  color: #757575;
+}
+
+.c0 {
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  height: 100vh;
+}
+
+.c0 main {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-image: url('https://i.imgur.com/M8kOD68.png');
+  overflow-x: auto;
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+  .c2 {
+    max-width: 1024px;
+    padding: 0;
+  }
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+@media (min-width:768px) {
+  .c3 ul {
+    width: 50%;
+  }
+}
+
+@media (min-width:1024px) {
+  .c3 ul {
+    width: 50%;
+  }
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+  .c5 {
+    background: #673AB7;
+  }
+
+  .c5 a small {
+    color: #fff;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 main {
+    padding: 2rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .c0 main {
+    max-width: 1024px;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="c2"
+    >
+      <nav
+        className="c3"
+      >
+        <ul>
+          <li>
+            <img
+              alt="burger-menu"
+              src=""
+            />
+          </li>
+        </ul>
+      </nav>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <picture
+          className="c4"
+        >
+          <img
+            alt="Logo"
+            src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/tracker-logo.svg"
+          />
+        </picture>
+      </a>
+    </div>
+  </div>
+  <div
+    className="c5"
+  >
+    <small>
+      Your Trello board needs only three lists: 
+      <br />
+      <em>
+        <strong>
+          To Do
+        </strong>
+        , 
+        <strong>
+          Doing
+        </strong>
+        ,
+         
+        <strong>
+          Done
+        </strong>
+      </em>
+    </small>
+  </div>
+</div>
+`;

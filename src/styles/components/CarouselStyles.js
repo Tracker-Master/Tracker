@@ -3,7 +3,7 @@ import Carousel from 'react-elastic-carousel';
 
 import { palette, devices, sizes } from 'Styles/GlobalStyles';
 
-export const CarouselContainer = styled.div`
+export const StyledCarousel = styled.div`
   width: 100%;
   @media ${devices.breakpointsTablet} {
   }

@@ -14,6 +14,8 @@ export const palette = {
   firstTextColor: `#212121`,
   secondTextColor: `#757575`,
   dividerColor: `#bdbdbd`,
+  degradedPurple: `#764BA2`,
+  degradedBlue: `#667EEA`,
 };
 
 export const fonts = {
