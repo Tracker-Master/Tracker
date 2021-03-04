@@ -5,16 +5,14 @@ export const getCards = async ({ boardID }) => {
 
   try {
     const response = await fetch(apiURL);
-    if (typeof response === 'object') {
-      const data = await response.json(),
-        cardsData = data.map((card) => {
-          const { desc, id, name, shortUrl } = card;
-          return { desc, id, name, shortUrl };
-        });
-      return cardsData;
-    }
-    return {};
+
+    const data = await response.json(),
+    cardsData = data.map((card) => {
+      const { desc, id, name, shortUrl } = card;
+      return { desc, id, name, shortUrl };
+    });
+    return cardsData;
   } catch (err) {
-    return console.error(err);
+    return new Error()
   }
 };
