@@ -1,6 +1,6 @@
 import { getBoards } from "../../services/getBoards";
 
-describe('Tests on the getBoard service', () => {
+describe('testing on the getBoard service', () => {
 
   beforeEach(() => {
     fetch.resetMocks();

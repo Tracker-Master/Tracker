@@ -5,16 +5,13 @@ export const getMembers = async ({ boardID }) => {
 
   try {
     const response = await fetch(apiURL);
-    if (typeof response === 'object') {
       const data = await response.json(),
         membersData = data.map((member) => {
           const { fullName, id, username } = member;
           return { fullName, id, username };
         });
       return membersData;
-    }
-    return {};
   } catch (err) {
-    return console.error(err);
+    return new Error()
   }
 };

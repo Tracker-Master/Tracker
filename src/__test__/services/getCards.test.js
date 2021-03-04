@@ -1,6 +1,6 @@
 import { getCards } from "../../services/getCards";
 
-describe('Tests on the getCards service', () => {
+describe('testing on the getCards service', () => {
 
   const description = 'this is a description'
   const name = 'this is a name'

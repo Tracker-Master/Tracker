@@ -1,6 +1,6 @@
 import { getLists } from "../../services/getLists";
 
-describe('Tests on the getLists service', () => {
+describe('testing on the getLists service', () => {
 
   const list = {
     id: 1,
