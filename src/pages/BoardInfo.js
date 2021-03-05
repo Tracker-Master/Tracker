@@ -1,19 +1,15 @@
 import React, { useState, useEffect, useContext } from 'react';
 
+import { Context } from 'Context/BoardContext';
+
 import { SEOHeader } from 'Components/SEOHeader';
 import { Members } from 'Components/Members';
+import { Cards } from 'Components/Cards';
 import { ProgressBar } from 'Components/ProgressBar';
-import { Context } from 'Context/BoardContext';
 import { PastelBar } from 'Components/PastelBar';
 import { FooterActions } from 'Components/FooterActions';
 
-import {
-  StyledInfo,
-  Title,
-  SubTitle,
-  CardsContainer,
-  Card,
-} from 'Styles/pages/BoardInfoStyles';
+import { StyledInfo, Title, SubTitle } from 'Styles/pages/BoardInfoStyles';
 
 export const BoardInfo = () => {
   const { board, card } = useContext(Context);
@@ -31,26 +27,7 @@ export const BoardInfo = () => {
         </SubTitle>
         <hr />
         <SubTitle>Number of cards you have in each list: </SubTitle>
-        <CardsContainer>
-          <Card>
-            <p>To Do</p>
-            <p> 7</p>
-          </Card>
-          <Card>
-            <p>To Do</p>
-            <p> 7</p>
-          </Card>
-          <Card>
-            <p>To Do</p>
-            <p> 7</p>
-          </Card>
-          <Card>
-            <p>To Do</p>
-            <p> 7</p>
-            {/* { if(list.name.toLowerCase.replace(/\w/, (firstLetter) => (firstLetter.toUpperCase())) === 'To Do' || 'Doing' || 'Done'){ */}
-            {/* {list.name === 'To Do'} */}
-          </Card>
-        </CardsContainer>
+        <Cards />
         <hr />
         <SubTitle>
           <strong>Your progress: </strong>
@@ -65,10 +42,6 @@ export const BoardInfo = () => {
         </SubTitle>
         <hr />
         <FooterActions />
-        {/* {console.log('necesitas hacer un if para cuando llegue al 100%')} */}
-        {/* {filter.map((item) => (
-          <p>{item.id}</p>
-        ))} */}
       </StyledInfo>
     </>
   );

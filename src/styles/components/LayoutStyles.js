@@ -12,6 +12,7 @@ export const StyledLayout = styled.div`
     margin: 0 auto;
     padding: 1rem;
     background-image: url('https://i.imgur.com/M8kOD68.png');
+    /* background-repeat: repeat; */
     overflow: auto;
     & ::-webkit-scrollbar {
       display: none;
