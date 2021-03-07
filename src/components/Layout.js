@@ -1,10 +1,7 @@
 import React from 'react';
-// import { StyledLayout } from '../..//components/LayoutStyles';
-
-import { StyledLayout } from '../styles/components/LayoutStyles';
-
 import Header from './Header';
 import Footer from './Footer';
+import { StyledLayout } from 'Styles/components/LayoutStyles';
 
 const Layout = ({ children }) => {
   return (

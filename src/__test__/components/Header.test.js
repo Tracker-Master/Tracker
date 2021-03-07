@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { create } from 'react-test-renderer';
 import { StaticRouter } from 'react-router';
-import Header from '../../components/Header';
+import Header from 'Components/Header';
 
 describe('<Header />', () => {
   const header = shallow(
@@ -21,7 +21,7 @@ describe('<Header />', () => {
         <Header />
       </StaticRouter>
     );
-    expect(wrapper).toMatchSnapshot();    
+    expect(wrapper).toMatchSnapshot();
   });
   
 });

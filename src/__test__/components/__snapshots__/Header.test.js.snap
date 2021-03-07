@@ -46,10 +46,6 @@ exports[`<Header /> Header snapshot 1`] = `
 
 .c2 ul {
   display: inherit;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   width: 100%;
 }
 
@@ -61,6 +57,8 @@ exports[`<Header /> Header snapshot 1`] = `
 .c2 ul li img {
   width: 2rem;
   height: inherit;
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 
 @media (min-width:768px) {
@@ -115,7 +113,7 @@ exports[`<Header /> Header snapshot 1`] = `
         <li>
           <img
             alt="burger-menu"
-            src=""
+            src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/menu-24px.svg"
           />
         </li>
       </ul>

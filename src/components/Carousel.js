@@ -1,8 +1,7 @@
 import React from 'react';
-
 import { StyledCarousel, Carousell } from 'Styles/components/CarouselStyles';
 
-export const Carousel = ({ children }) => {
+const Carousel = () => {
   return (
     <StyledCarousel>
       <Carousell
@@ -46,3 +45,5 @@ export const Carousel = ({ children }) => {
     </StyledCarousel>
   );
 };
+
+export default Carousel;

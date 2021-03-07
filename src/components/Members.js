@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
-
-import { Context } from 'Context/BoardContext';
-import { palette, sizes, devices } from 'Styles/GlobalStyles';
+import { Context } from '../context/BoardContext';
 import { StyledMembers, Member } from 'Styles/components/MembersStyles';
 
-export const Members = () => {
+const Members = () => {
   const { member } = useContext(Context);
   return (
     <StyledMembers>
@@ -22,3 +20,5 @@ export const Members = () => {
     </StyledMembers>
   );
 };
+
+export default Members;

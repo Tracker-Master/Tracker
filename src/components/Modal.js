@@ -10,7 +10,7 @@ import {
   Paragraphs,
 } from 'Styles/components/ModalStyles';
 
-export const Modal = ({ modal, onClose, type }) => {
+const Modal = ({ modal, onClose, type }) => {
   const [change, setChange] = useState(modal);
 
   useEffect(() => {
@@ -38,6 +38,8 @@ export const Modal = ({ modal, onClose, type }) => {
     document.getElementById('modal')
   );
 };
+
+export default Modal;
 
 Modal.propTypes = {
   modal: PropTypes.bool.isRequired,

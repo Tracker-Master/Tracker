@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { create } from 'react-test-renderer';
-import SEOHeader from '../../components/SEOHeader';
+import SEOHeader from 'Components/SEOHeader';
 
 describe('<SEOHeader />', () => {
   

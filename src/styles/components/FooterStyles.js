@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-// import { palette, devices, sizes } from 'Styles/GlobalStyles';
-import { palette, devices, sizes } from '../GlobalStyles';
-
+import { palette, devices, sizes } from 'Styles/GlobalStyles';
 
 export const StyledFooter = styled.div`
   display: flex;

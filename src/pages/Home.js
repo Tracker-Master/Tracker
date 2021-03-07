@@ -3,16 +3,16 @@ import { useHistory } from 'react-router-dom';
 
 import { getLists } from 'Services/getLists';
 
-import { SEOHeader } from 'Components/SEOHeader';
-import { Carousel } from 'Components/Carousel';
+import SEOHeader from 'Components/SEOHeader';
+import Carousel from 'Components/Carousel';
 import { StyledHome, Title, FormBoard } from 'Styles/pages/HomeStyles';
-import { useModalWarning } from 'Hooks/useModalWarning';
-import { ModalWarning } from 'Components/ModalWarning';
+import { useModal } from 'Hooks/useModal';
+import { Modal } from 'Components/Modal';
 
 export const Home = () => {
   const history = useHistory();
   const [board, setBoard] = useState([]);
-  const [open, handleStateModal] = useModalWarning();
+  const [open, handleStateModal] = useModal();
 
   const TODO_DOING_DONE = [
     'To Do',
@@ -74,7 +74,7 @@ export const Home = () => {
           <button>Search Board</button>
         </FormBoard>
       </StyledHome>
-      {open && <ModalWarning modal={open} onClose={handleStateModal} />}
+      {open && <Modal modal={open} onClose={handleStateModal} />}
     </>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { create } from 'react-test-renderer';
 import { StaticRouter } from 'react-router';
-import Layout from '../../components/Layout';
+import Layout from 'Components/Layout';
 
 describe('<Layout />', () => {
   const layout = shallow(

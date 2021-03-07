@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 
-export const SEOHeader = ({ title }) => {
+const SEOHeader = ({ title }) => {
   return (
     <Helmet>
       <title>{title}</title>
@@ -15,3 +16,9 @@ export const SEOHeader = ({ title }) => {
     </Helmet>
   );
 };
+
+export default SEOHeader;
+
+SEOHeader.propTypes = {
+  title: PropTypes.string.isRequired
+}

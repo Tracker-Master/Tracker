@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProgressBar /> ProgressBar snapshot 1`] = `
+.c0 {
+  margin: 8px auto 50px;
+}
+
+.c0 progress {
+  width: 100%;
+  height: 18px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid rgba(103,58,183,0.75);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.c0 progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+.c0 progress::-webkit-progress-value {
+  background: linear-gradient( to right,#764BA2,#667EEA );
+}
+
+@media (min-width:768px) {
+
+}
+
+@media (min-width:1024px) {
+
+}
+
+<div
+  className="c0"
+>
+  <progress
+    max="100"
+    value="69.56"
+  >
+    69.56%
+  </progress>
+</div>
+`;

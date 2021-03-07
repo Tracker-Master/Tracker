@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 import { API_URL, API_KEY, API_TOKEN } from './Settings';
 
 export const getLists = async ({ boardID }) => {
@@ -5,13 +6,12 @@ export const getLists = async ({ boardID }) => {
 
   try {
     const response = await fetch(apiURL);
-    const data = await response.json(),
-      listData = data.map((list) => {
-        const { id, name } = list;
-        return { id, name };
-      });
+    const listData = await response.json();
+    console.log('here', listData);
     return listData;
+    // { id, name } = listData;
+    // return {id, name};
   } catch (err) {
-    return console.error(err);
+    throw new Error('Invalid ID');
   }
 };

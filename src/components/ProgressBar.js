@@ -1,8 +1,7 @@
 import React from 'react';
-
 import { StyledProgress } from 'Styles/components/ProgressBarStyles';
 
-export const ProgressBar = () => {
+const ProgressBar = () => {
   return (
     <StyledProgress>
       <progress max="100" value="69.56">
@@ -11,3 +10,5 @@ export const ProgressBar = () => {
     </StyledProgress>
   );
 };
+
+export default ProgressBar;

@@ -46,10 +46,6 @@ exports[`<Layout /> Layout snapshot 1`] = `
 
 .c3 ul {
   display: inherit;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
   width: 100%;
 }
 
@@ -61,6 +57,8 @@ exports[`<Layout /> Layout snapshot 1`] = `
 .c3 ul li img {
   width: 2rem;
   height: inherit;
+  -webkit-filter: invert(1);
+  filter: invert(1);
 }
 
 .c5 {
@@ -94,7 +92,11 @@ exports[`<Layout /> Layout snapshot 1`] = `
   margin: 0 auto;
   padding: 1rem;
   background-image: url('https://i.imgur.com/M8kOD68.png');
-  overflow-x: auto;
+  overflow: auto;
+}
+
+.c0 main::-webkit-scrollbar {
+  display: none;
 }
 
 @media (min-width:768px) {
@@ -178,7 +180,7 @@ exports[`<Layout /> Layout snapshot 1`] = `
           <li>
             <img
               alt="burger-menu"
-              src=""
+              src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/menu-24px.svg"
             />
           </li>
         </ul>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 
-import { SEOHeader } from 'Components/SEOHeader';
-import { Members } from 'Components/Members';
-import { ProgressBar } from 'Components/ProgressBar';
+import SEOHeader from 'Components/SEOHeader';
+import Members from 'Components/Members';
+import ProgressBar from 'Components/ProgressBar';
 import { Context } from 'Context/BoardContext';
 import { PastelBar } from 'Components/PastelBar';
 import { FooterActions } from 'Components/FooterActions';
