@@ -20,7 +20,7 @@ export const StyledHome = styled.main`
       display: block;
       margin: 0 auto;
       width: 100%;
-      /* height: 21.75rem; */
+      height: 21.75rem;
     }
     & .arrow-top {
       transform: rotate(180deg);
