@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 import { getBoards } from 'Services/getBoards';
 import { getCards } from 'Services/getCards';
@@ -34,18 +34,29 @@ export const BoardContextProvider = ({ children }) => {
     });
   }, []);
 
+  const memoizedValue = useMemo(() => {
+    return {
+      board,
+      card,
+      list,
+      member,
+    };
+  }, [board, card, list, member]);
+
   return (
     <Context.Provider
-      value={{
-        board,
-        setBoard,
-        card,
-        setCard,
-        list,
-        setList,
-        member,
-        setMember,
-      }}
+      value={memoizedValue}
+      // {...props}
+      // value={{
+      //   board,
+      //   setBoard,
+      //   card,
+      //   setCard,
+      //   list,
+      //   setList,
+      //   member,
+      //   setMember,
+      // }}
     >
       {children}
     </Context.Provider>

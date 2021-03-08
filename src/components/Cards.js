@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 
 import { Context } from 'Context/BoardContext';
+import { getCardsOfLists } from 'Services/getCardsOfList';
+
+// import { Card } from 'Components/Card';
 
 import {
   StyledCards,
@@ -11,17 +14,21 @@ import {
 } from 'Styles/components/CardsStyles';
 
 export const Cards = () => {
-  const { card } = useContext(Context);
+  const { list } = useContext(Context);
+  getCardsOfLists();
+
   return (
     <StyledCards>
-      <Container>
-        <CardLeft />
-        <CardInner />
-        <Card>
-          <p>To do</p>
-          <p>7</p>
-        </Card>
-      </Container>
+      {list.map((list) => (
+        <Container key={list.id}>
+          <CardLeft />
+          <CardInner />
+          <Card>
+            <p>{list.name}</p>
+            <p>7</p>
+          </Card>
+        </Container>
+      ))}
     </StyledCards>
   );
 };

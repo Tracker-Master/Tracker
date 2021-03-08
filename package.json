@@ -30,6 +30,7 @@
     "react-dom": "^17.0.1",
     "react-elastic-carousel": "^0.11.1",
     "react-router-dom": "^5.2.0",
+    "react-router-hash-link": "^2.4.0",
     "react-screenshots": "0.0.14",
     "styled-components": "^5.2.1"
   },
@@ -48,6 +49,7 @@
     "html-webpack-plugin": "^5.2.0",
     "prettier": "^2.2.1",
     "react-helmet": "^6.1.0",
+    "source-map-loader": "^2.0.1",
     "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"

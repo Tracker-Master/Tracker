@@ -18,7 +18,9 @@ export const Member = styled.div`
   max-height: 4.25rem;
   max-width: 2.625rem;
   text-align: center;
+
   & picture {
+    filter: drop-shadow(0 0.25rem 0.125rem ${palette.cardsBorderAlpha});
     & img {
       margin: 0.125rem;
       height: 2.375rem;
