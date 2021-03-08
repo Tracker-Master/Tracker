@@ -1,6 +1,6 @@
+var webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -50,6 +50,11 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.js$/,
+        enforce: 'pre',
+        use: ['source-map-loader'],
+      },
     ],
   },
   plugins: [
@@ -57,11 +62,6 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html',
     }),
-    new webpack.SourceMapDevToolPlugin(),
-
-    // new MiniCssExtractPlugin({
-    //   filename: 'assets/[name].css',
-    // }),
   ],
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -70,5 +70,5 @@ module.exports = {
     port: 3000,
     open: true,
   },
-  devtool: 'eval',
+  devtool: 'eval-source-map',
 };

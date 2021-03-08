@@ -1,12 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useContext } from 'react';
+import { Context } from 'Context/BoardContext';
 import { API_URL, API_KEY, API_TOKEN } from './Settings';
 
-import { Context } from 'Context/BoardContext';
-
-export const getCardsOfList = async () => {
+export const getCardsOfLists = async () => {
   const { list } = useContext(Context);
-
-  const apiURL = `${API_URL}/lists/${filter.id}/cards?key=${API_KEY}&token=${API_TOKEN}`;
 
   const TODO_DOING_DONE = [
     'To Do',
@@ -18,26 +15,21 @@ export const getCardsOfList = async () => {
     'Finalizados',
   ];
 
-  const filter = list.filter((singleList) => {
+  const filteredList = list.filter((singleList) => {
     const capitalizeListTitle = singleList.name
       .trim()
       .toLowerCase()
       .replace(/\w\S*/g, (w) => w.replace(/^\w/, (c) => c.toUpperCase()));
     return TODO_DOING_DONE.includes(capitalizeListTitle);
   });
-  console.log(filter);
+  const getListsOfCards = filteredList.map(
+    ({ id }) => `${API_URL}/lists/${id}/cards?key=${API_KEY}&token=${API_TOKEN}`
+  );
+  const data = getListsOfCards.map((url) =>
+    fetch(url, { method: 'GET' }).then((response) => response.json())
+  );
+  const cardsOfLists = await Promise.allSettled(data);
 
-  Promise.allSettled(filter.id).then(async () => {
-    try {
-      const response = await fetch(apiURL);
-      const data = await response.json(),
-        cardsOfListData = data.map((cardsOfList) => {
-          const { id, desc, name } = cardsOfList;
-          return { id, desc, name };
-        });
-      return cardsOfListData;
-    } catch (err) {
-      return console.error(err);
-    }
-  });
+  console.log(cardsOfLists);
+  return cardsOfLists;
 };

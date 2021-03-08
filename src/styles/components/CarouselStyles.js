@@ -17,14 +17,15 @@ export const Carousell = styled(Carousel)`
     text-align: center;
     font-size: 0.75rem;
     & img {
-      max-width: calc(${sizes.mobile} - 10rem);
+      max-width: 15rem;
+      max-height: 10rem;
     }
   }
   & .rec-pagination {
     margin: 0.125rem 0;
     & .rec-dot {
-      height: 0.75rem;
-      width: 0.75rem;
+      height: 0.5rem;
+      width: 0.5rem;
       background: ${palette.dividerColor};
       box-shadow: none;
     }
@@ -40,11 +41,21 @@ export const Carousell = styled(Carousel)`
   }
   @media ${devices.breakpointsTablet} {
     & .rec-swipable {
+      font-size: 1rem;
       & img {
-        max-width: calc(${sizes.tablet} - 20rem);
+        max-width: 25rem;
+        max-height: 17.5rem;
+      }
+    }
+    & .rec-pagination {
+      padding: 1.5rem 0;
+      & .rec-dot {
+        height: 0.75rem;
+        width: 0.75rem;
       }
     }
   }
   @media ${devices.breakpointsDesktop} {
+    display: none;
   }
 `;

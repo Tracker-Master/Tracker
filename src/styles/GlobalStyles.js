@@ -14,8 +14,9 @@ export const palette = {
   firstTextColor: `#212121`,
   secondTextColor: `#757575`,
   dividerColor: `#bdbdbd`,
-  dividerColorOpacity: `rgba(189, 189, 189, 0.3)`,
+  dividerColorAlpha: `rgba(189, 189, 189, 0.75)`,
   cardsBorder: `#707070`,
+  cardsBorderAlpha: `rgba(112, 112, 112, 0.25)`,
   degradedPurple: `#764BA2`,
   degradedBlue: `#667EEA`,
 };

@@ -3,17 +3,14 @@ import { palette, devices, sizes } from 'Styles/GlobalStyles';
 
 export const StyledLayout = styled.div`
   display: grid;
-  grid-template-rows: ${(props) =>
-    props.withOutFooter ? '50px 1fr' : '50px 1fr 50px'};
+  grid-template-rows: ${(props) => props.rows};
   height: 100vh;
-  /* background-color: ${palette.firstColor}; */
   & main {
     width: 100%;
     margin: 0 auto;
     padding: 1rem;
-    background-image: url('https://i.imgur.com/M8kOD68.png');
-    /* background-repeat: repeat; */
-    overflow: auto;
+    background-image: url('https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/background/home-desktop-1.svg');
+    overflow-y: auto;
     & ::-webkit-scrollbar {
       display: none;
     }
@@ -25,6 +22,7 @@ export const StyledLayout = styled.div`
   }
   @media ${devices.breakpointsDesktop} {
     & main {
+      padding: 4rem 4rem 2rem;
       max-width: ${sizes.desktop};
     }
   }

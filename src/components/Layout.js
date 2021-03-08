@@ -5,16 +5,17 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 
 export const Layout = ({ children }) => {
+  let Location = location.pathname;
   return (
     <>
-      {location.pathname === `/` ? (
-        <StyledLayout>
+      {Location === '/' ? (
+        <StyledLayout rows="50px 1fr 50px">
           <Header />
           {children}
           <Footer />
         </StyledLayout>
       ) : (
-        <StyledLayout withOutFooter>
+        <StyledLayout rows="50px 1fr">
           <Header />
           {children}
         </StyledLayout>

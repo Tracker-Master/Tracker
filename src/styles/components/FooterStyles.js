@@ -14,9 +14,7 @@ export const StyledFooter = styled.div`
   @media ${devices.breakpointsDesktop} {
     background: ${palette.firstColor};
     & a {
-      & small {
-        color: ${palette.whiteColor};
-      }
+      display: none;
     }
   }
 `;
