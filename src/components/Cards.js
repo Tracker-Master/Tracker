@@ -4,7 +4,8 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 import { palette } from 'Styles/GlobalStyles';
 
 import { Context } from 'Context/BoardContext';
-import { getCardsOfLists } from 'Services/getCardsOfList';
+import { API_URL, API_KEY, API_TOKEN } from 'Services/Settings';
+// import { getCardsOfLists } from 'Services/getCardsOfList';
 
 import {
   StyledCards,
@@ -16,18 +17,27 @@ import {
 
 export const Cards = () => {
   const { list } = useContext(Context);
-  // const [cardOfList, setCardOfList] = useState([]);
+  const [cardOfList, setCardOfList] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // const listOfCards = () => {
-  //   getCardsOfLists();
-  // };
-  // console.log(listOfCards);
+  console.log(cardOfList);
 
-  useEffect(() => {
+  useEffect(async () => {
     setTimeout(() => {
       setLoading(false);
     }, 1500);
+
+    const getIdOfList = list.map(
+      ({ id }) =>
+        `${API_URL}/lists/${id}/cards?key=${API_KEY}&token=${API_TOKEN}`
+    );
+    const data = await Promise.allSettled(
+      getIdOfList.map((url) =>
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => data.length)
+      )
+    ).then((item) => setCardOfList(item));
   }, []);
 
   const Loader = () => {
@@ -62,13 +72,18 @@ export const Cards = () => {
   } else {
     return (
       <StyledCards>
+        {/* {cardOfList.map((lengthOfList, index) => {
+          return <p key={index}>{lengthOfList.value}</p>;
+        })} */}
         {list.map((list) => (
           <Container key={list.id}>
             <CardLeft />
             <CardInner />
             <Card>
               <p>{list.name}</p>
-              <p>7</p>
+              {cardOfList.map((lengthOfList, index) => {
+                return <p key={index}>{lengthOfList.value}</p>;
+              })}
             </Card>
           </Container>
         ))}

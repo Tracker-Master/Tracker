@@ -109,9 +109,10 @@ export const FormBoard = styled.form`
     & input {
       height: 2.75rem;
       width: 40rem;
+      font-size: 1.125rem;
       padding: 0 1rem;
       & ::placeholder {
-        font-size: 1.25rem;
+        font-size: 1.125rem;
       }
     }
     & button {
