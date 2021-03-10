@@ -60,10 +60,6 @@ export const Home = () => {
     }
   };
 
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location.pathname]);
-
   return (
     <>
       <SEOHeader title={'❣ Project Tracker'} />

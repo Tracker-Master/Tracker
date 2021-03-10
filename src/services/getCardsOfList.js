@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import { Context } from 'Context/BoardContext';
 import { API_URL, API_KEY, API_TOKEN } from './Settings';
 
@@ -30,6 +30,16 @@ export const getCardsOfLists = async () => {
   );
   const cardsOfLists = await Promise.allSettled(data);
 
-  console.log(cardsOfLists);
-  return cardsOfLists;
+  const lengthOfCards = cardsOfLists.map(({ value }) => {
+    return (
+      value.length,
+      value.map(({ name }) => {
+        return name;
+      })
+    );
+  });
+
+  // console.log(lengthOfCards);
+
+  return lengthOfCards;
 };

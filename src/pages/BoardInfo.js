@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useContext } from 'react';
 
 import { Context } from 'Context/BoardContext';
 
@@ -13,10 +13,6 @@ import { StyledInfo, Title, SubTitle } from 'Styles/pages/BoardInfoStyles';
 
 export const BoardInfo = () => {
   const { board, card } = useContext(Context);
-
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location.pathname]);
 
   return (
     <>

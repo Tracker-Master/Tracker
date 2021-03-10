@@ -8,7 +8,6 @@ export const getCards = async ({ boardID }) => {
     const data = await response.json(),
       cardsData = data.map((card) => {
         const { id, name } = card;
-        // console.log({ id, name });
         return { id, name };
       });
     return cardsData;

@@ -19,6 +19,7 @@ export const palette = {
   cardsBorderAlpha: `rgba(112, 112, 112, 0.25)`,
   degradedPurple: `#764BA2`,
   degradedBlue: `#667EEA`,
+  skeletonColor: `rgba(103, 58, 183, 0.15)`,
 };
 
 export const fonts = {
