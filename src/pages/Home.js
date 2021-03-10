@@ -65,8 +65,9 @@ export const Home = () => {
       <SEOHeader title={'❣ Project Tracker'} />
       <StyledHome>
         <Title id="Top">
-          Leemos tu tablero de Trello <br />
-          <p>y analizamos tu progreso</p>
+          We read your Trello board
+          <br />
+          <p>and we analyze your progress</p>
         </Title>
         <Carousel />
         <CarouselDesktop />

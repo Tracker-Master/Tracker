@@ -31,16 +31,14 @@ export const Carousel = ({ children }) => {
         showArrows={false}
       >
         <p>
-          Sólo necesitas introducir el ID de tu tablero y nosotros haremos el
-          resto
+          You only need to enter the ID of your board and we will do the rest
         </p>
         <p>
-          Sabrás el número de miembros con los que cuenta tu tablero, y el
-          nombre de cada uno de ellos
+          You will know the number of members that your board has, and the name
+          of each of them
         </p>
         <p>
-          Sabrás de una manera rápida el número total de tarjetas que tienes en
-          cada lista
+          You will quickly know the total number of cards you have in each list
         </p>
       </Carousell>
     </StyledCarousel>
