@@ -3,7 +3,7 @@ import { StyledNotFound } from 'Styles/pages/NotFoundStyles';
 
 export const NotFound = () => {
   return (
-    <StyledNotFound style={{}}>
+    <StyledNotFound>
       <h1>Error</h1>
     </StyledNotFound>
   );
