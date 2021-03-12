@@ -7,8 +7,9 @@ import { getLists } from 'Services/getLists';
 import { SEOHeader } from 'Components/SEOHeader';
 import { Carousel } from 'Components/Carousel';
 import { CarouselDesktop } from 'Components/CarouselDesktop';
-import { useModalWarning } from 'Hooks/useModalWarning';
-import { ModalWarning } from 'Components/ModalWarning';
+import { Modal } from 'Components/Modal';
+
+import { useModal } from 'Hooks/useModal';
 
 import { StyledHome, Title, FormBoard } from 'Styles/pages/HomeStyles';
 
@@ -17,7 +18,7 @@ export const Home = () => {
   // const home = useMemo(() => location.pathname, [location.pathname]);
 
   const [board, setBoard] = useState([]);
-  const [open, handleStateModal] = useModalWarning();
+  const [open, handleStateModal] = useModal();
 
   const TODO_DOING_DONE = [
     'To Do',
@@ -26,7 +27,7 @@ export const Home = () => {
     'Doing',
     'En Curso',
     'Done',
-    'Finalizados',
+    'Finalizados'
   ];
 
   const handleChange = (event) => {
@@ -34,9 +35,8 @@ export const Home = () => {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    if (board === '') {
-      handleStateModal();
+    if (typeof(board) === 'object' || board === '') {
+      handleStateModal('error');
     } else {
       getLists({ boardID: `${board}` }).then((list) => {
         const MAX_NUMBER_OF_LISTS = 3;
@@ -53,16 +53,22 @@ export const Home = () => {
           history.push(`/board/${board}`);
         } else if (list.length > MAX_NUMBER_OF_LISTS) {
           console.log(`Tu tablero cuenta con más de los listas necesarios`);
+          handleStateModal('warning');
+
         } else if (list.length < MAX_NUMBER_OF_LISTS) {
           console.log(`Tu tablero cuenta con menos de los listas necesarios`);
+          handleStateModal('warning');
+
         }
       });
     }
+    event.preventDefault();
+
   };
 
   return (
     <>
-      <SEOHeader title={'❣ Project Tracker'} />
+      <SEOHeader title={'Project Tracker'} />
       <StyledHome>
         <Title id="Top">
           We read your Trello board
@@ -83,7 +89,7 @@ export const Home = () => {
             value={board}
             placeholder="Write your board ID"
           />
-          <button>Search Board</button>
+          <button type='submit'>Search Board</button>
         </FormBoard>
         <Link to="#Top" smooth>
           <img
@@ -93,7 +99,15 @@ export const Home = () => {
           />
         </Link>
       </StyledHome>
-      {open && <ModalWarning modal={open} onClose={handleStateModal} />}
+      {
+        open.message && <Modal modal={open.message} onClose={handleStateModal} type='message' />
+      }
+      {
+        open.warning && <Modal modal={open.warning} onClose={handleStateModal} type='warning' />
+      }
+      {
+        open.error && <Modal modal={open.error} onClose={handleStateModal} type='error' />
+      }
     </>
   );
 };
