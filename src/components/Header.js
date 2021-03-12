@@ -13,14 +13,15 @@ export const Header = () => {
     <StyledHeader>
       <HeaderContainer>
         <Nav>
-          <ul>
+          {/* We're going to use this button when we inplement the menu */}
+          {/* <ul>
             <li>
               <img
                 src="https://assets-juanjosemayorga-website.s3.amazonaws.com/tracker-project-s3/menu-24px.svg"
                 alt="burger-menu"
               />
             </li>
-          </ul>
+          </ul> */}
         </Nav>
         <Link to="/">
           <Logo>
