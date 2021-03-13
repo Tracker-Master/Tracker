@@ -36,7 +36,7 @@ export const Home = () => {
 
   const handleSubmit = (event) => {
     if (typeof(board) === 'object' || board === '') {
-      handleStateModal('error');
+      handleStateModal('message');
     } else {
       getLists({ boardID: `${board}` }).then((list) => {
         const MAX_NUMBER_OF_LISTS = 3;
@@ -52,13 +52,11 @@ export const Home = () => {
           });
           history.push(`/board/${board}`);
         } else if (list.length > MAX_NUMBER_OF_LISTS) {
-          console.log(`Tu tablero cuenta con más de los listas necesarios`);
-          handleStateModal('warning');
-
+          // console.log(`Tu tablero cuenta con más de los listas necesarios`);
+          handleStateModal('error');
         } else if (list.length < MAX_NUMBER_OF_LISTS) {
-          console.log(`Tu tablero cuenta con menos de los listas necesarios`);
-          handleStateModal('warning');
-
+          // console.log(`Tu tablero cuenta con menos de los listas necesarios`);
+          handleStateModal('error');
         }
       });
     }
